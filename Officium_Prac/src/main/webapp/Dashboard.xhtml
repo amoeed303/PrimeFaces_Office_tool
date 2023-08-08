@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Officium Dashboard</title>
+    <style>
+        .dashboard {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+          
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+
+
+/* CSS for the 'box' div that contains the buttons */
+.box {
+    display: flex;
+    flex:1;
+   justify-content: space-between; 
+    flex-direction: row;
+     /* set the direction to horizontal */
+     /* space the buttons evenly */
+}
+
+/* CSS for the 'calendar' div that contains the datePicker */
+
+
+/* CSS for 'cen' div to align everything nicely */
+.cen {
+    display: flex;
+    flex-direction: row; /* stack everything vertically */
+    align-items: center; /* center contents horizontally */
+}
+      
+
+        .icon-button {
+            display: inline;
+            width: 100%;
+            height: 50px;
+            background-color: #f2f2f2;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            margin-right: 30px;
+
+        }
+
+      
+
+        .news-events {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .news-events-placeholder {
+            flex: 1;
+            height: 500px;
+            background-color: lightgrey;
+            margin-right: 10px;
+        }
+
+        span {
+            font-size: 25px;
+            margin: 5px;
+        }
+      
+    button.ui-button {
+        margin-right: 50px;
+    }
+    </style>
+</h:head>
+<h:body>
+    <div class="dashboard">
+
+
+        <div class="header">
+            <div>
+                <h:panelGroup layout="block">
+                    <h:graphicImage value="#{resource['images:logo.png']}" style="height: 100px;" />
+                </h:panelGroup>
+            </div>
+            <div>
+                <h1>Officium Dashboard</h1>
+            </div>
+        </div>
+
+
+
+
+<div class="cen">
+        <div class="box">
+
+
+            <div><span>Letter</span>
+                <p:commandButton icon="pi pi-envelope" styleClass="icon-button" />
+            </div>
+
+
+            <div> <span>Note</span>
+                <p:commandButton icon="pi pi-file" styleClass="icon-button" />
+            </div>
+
+            <div>
+                <span>Noting</span>
+                <p:commandButton icon="pi pi-pencil" styleClass="icon-button" />
+            </div>
+            
+          </div>
+            	
+            	<div class="calendar">
+            <p:datePicker  inline="true" />
+             </div>
+             
+             
+ 
+  </div>     
+       
+       
+       
+        <div class="news-events">
+            <div class="news-events-placeholder"><h1>News and Events</h1></div>
+             <div class="news-events-placeholder"><h1>Khabarnama</h1></div>	
+    </div>
+    </div>
+</h:body>
+
+</html>

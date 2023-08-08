@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Login</title>
+    <style>
+        body {
+            background-image: url("#{resource['images/background.png']}");
+            background-size: 70%;
+            background-repeat: no-repeat;
+        }
+        .login-panel {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            margin-right:5%;
+        }
+        .login-panel input {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+           
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+    </style>
+</h:head>
+<h:body>
+    <h:form id="loginForm">
+        <p:outputPanel styleClass="login-panel">
+            <p:inputText id="email" value="#{loginBean.email}" placeholder="Email" required="true" />
+            <p:password id="password" value="#{loginBean.password}" placeholder="Password" required="true" />
+            <p:commandButton id="loginButton" value="Login" action="#{loginBean.login}" ajax="false" />
+        </p:outputPanel>
+    </h:form>
+</h:body>
+</html>
